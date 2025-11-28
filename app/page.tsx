@@ -13,7 +13,10 @@ export default function Home() {
     <TransitionPage/>
     <MotionTransition position="bottom" >
       <Hero/>
+      {/*
       <Container> 
+
+
       <section className={styles.catalogo}>
         <h2>Catálogo de Sueros</h2>
         <div className={styles.grid}>
@@ -28,7 +31,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+      
       </Container>
+      */}
       </MotionTransition>
     </>
   );

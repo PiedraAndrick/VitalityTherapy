@@ -56,12 +56,12 @@ export default function TherapyCatalog({
                             key={product.id}
                             className="flex flex-col rounded-2xl border border-white/10 bg-white/5/5 bg-liniar-to-br from-white/5 to-white/0 p-4 shadow-lg backdrop-blur-md"
                         >
-                            <div className="relative w-full aspect-4/3 overflow-hidden ">
+                            <div className="relative w-full aspect-3/4 overflow-hidden hover:scale-102  ">
                                 <Image
                                     src={product.imageSrc}
                                     alt={product.imageAlt}
                                     fill
-                                    className="object-contain hover:scale-125 transition-transform border rounded-4xl "
+                                    className="object-cover  transition-transform border rounded-4xl "
                                 />
                             </div>
 
