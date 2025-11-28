@@ -1,0 +1,75 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #205225;
+  flex-wrap: wrap; /* Para que no se rompa en pantallas pequeñas */
+}
+
+/* Logo */
+.logo {
+  flex: 0 0 auto;
+  color: #ffffff;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Links centro */
+.links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #4f46e5;
+}
+
+/* Redes sociales lado derecho */
+.social {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links {
+    order: 2;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .social {
+    order: 3;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
