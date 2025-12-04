@@ -1,19 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
-import styles from '../styles/Home.module.css';
-import Layout from "./layout";
-import { serums } from '../data/serums';
+"use client"
 import TransitionPage from "@/components/TransisionPage";
 import MotionTransition from "@/components/MotionTransition";
 import Hero from "@/components/Hero";
-import Container from "@/components/Container";
+import ContentImageSection from "@/components/ContentImageSection";
 export default function Home() {
   return (
     <>
-    <TransitionPage/>
-    <MotionTransition position="bottom" >
-      <Hero/>
-      {/*
+      <TransitionPage />
+      <MotionTransition position="bottom" >
+        <Hero />
+
+        <ContentImageSection
+        reverse={true}
+          title="Sueroterapia pensada para tu bienestar"
+          imageSrc="/images/inmunologico.png"
+          description={
+            <>
+              <span className="eyebrow">Bienestar · Estética · Energía</span>
+              <p className="lead">
+                En <strong>Vitality Therapy</strong> combinamos sueroterapia intravenosa con un
+                enfoque amable y profesional para ayudarte a recuperar tu energía y sentirte mejor
+                por dentro y por fuera.
+              </p>
+              <ul>
+                <li>Protocolos personalizados según tus objetivos.</li>
+                <li>Sesiones en un entorno cómodo y seguro.</li>
+                <li>Acompañamiento antes, durante y después de tu terapia.</li>
+              </ul>
+            </>
+          }
+        />
+
+        <ContentImageSection
+          title="¿Por qué son buenos los sueros intravenosos?"
+          description="Hidratación rápida y efectiva...\nRecuperación rápida..."
+          imageSrc="/images/inmunologico.png"
+          alt="Ilustración de sueros"
+          reverse={false} // cambia a true para invertir la posición
+        />
+        {/*
       <Container> 
 
 
