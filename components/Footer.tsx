@@ -5,7 +5,7 @@ import { socialNetworks } from "@/dataIndex";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-[#205225] mt-16">
+    <footer className="bg-[#205225]">
       <div className="mx-auto  max-w-5xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
         {/* Lado izquierdo: texto */}
         <div className="text-sm text-zinc-100 text-center">

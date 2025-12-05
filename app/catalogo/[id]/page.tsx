@@ -49,16 +49,31 @@ export default function SerumDetailPage() {
             className="object-cover object-center"
           />
         </div>
-
         {/* Información del suero */}
         <div className="md:w-1/2 w-full flex flex-col justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            {serum.name}
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">{serum.name}</h1>
+
           <p className="text-base md:text-lg mb-6 leading-relaxed text-gray-300">
             {serum.description}
           </p>
 
+          {/* Contenido del suero */}
+          <h2 className="text-xl font-semibold mb-2">Contenido</h2>
+          <ul className="list-disc pl-6 text-gray-300 mb-4">
+            {serum.content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+
+          {/* Beneficios del suero */}
+          <h2 className="text-xl font-semibold mb-2">Beneficios</h2>
+          <ul className="list-disc pl-6 text-gray-300 mb-6">
+            {serum.benefits.map((benefit, index) => (
+              <li key={index}>{benefit}</li>
+            ))}
+          </ul>
+
+          {/* Opciones de terapia ya existentes */}
           <h2 className="text-xl font-semibold mb-3">Opciones de terapia</h2>
           <ul className="space-y-3">
             {serum.options.map((option) => (
@@ -67,17 +82,13 @@ export default function SerumDetailPage() {
                 className="flex items-center justify-between rounded-lg bg-white/10 px-4 py-3"
               >
                 <div>
-                  <span className="block font-medium text-white">
-                    {option.name}
-                  </span>
+                  <span className="block font-medium text-white">{option.name}</span>
                   {option.durationMinutes && (
-                    <span className="text-sm text-gray-400">
-                      {option.durationMinutes} min
-                    </span>
+                    <span className="text-sm text-gray-400">{option.durationMinutes} min</span>
                   )}
                 </div>
                 <span className="font-semibold text-white">
-                  {(option.currency ?? "$")} {option.price.toFixed(2)}
+                  {(option.currency ?? '$')} {option.price.toFixed(2)}
                 </span>
               </li>
             ))}

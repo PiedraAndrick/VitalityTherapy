@@ -11,6 +11,7 @@ export default function NavBar() {
         <Link href="/">Inicio</Link>
         <Link href="/catalogo">Sueros</Link>
         <Link href="/acerca">Acerca</Link>
+        <Link href="/contacto">Contacto</Link>
       </div>
         <ul className={`${styles.social} flex items-center gap-4`}>
           {socialNetworks.map(({ id, logo, src }) => (

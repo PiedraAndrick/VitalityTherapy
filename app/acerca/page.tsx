@@ -8,7 +8,7 @@ export default function AboutUs() {
     <>
     <TransitionPage/>
     <MotionTransition position="right" >
-          <div style={{ padding: '1rem' }}>
+          <div style={{ padding: '1rem',marginBottom: '4rem' }}>
         <h1 style={{ textAlign: 'center', marginBottom: '1rem',marginTop: '0.5rem',fontSize:'2rem', fontFamily:'emoji',}}>Sobre Nosotros</h1>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}> Bienestar, estetica y energía.</h2>
 

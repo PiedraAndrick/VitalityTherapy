@@ -39,7 +39,7 @@ export default function TherapyCatalog({
             <Link
               href={`/catalogo/${product.id}`}
               key={product.id}
-              className="no-underline group " 
+              className="no-underline group "
             >
               <article
                 className="
@@ -49,16 +49,19 @@ export default function TherapyCatalog({
                   group-hover:-translate-y-2 group-hover:shadow-xl group-hover:border-[#2a5c2f]
                 "
               >
-                <div className="relative w-full max-w-md aspect-3/4 overflow-hidden rounded-2xl shadow-lg">
+                <div className="w-full max-w-md m-auto rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src={product.imageSrc}
                     alt={product.imageAlt}
-                    fill
+                    width={600}          // relación 3:4 → 600x800, por ejemplo
+                    height={800}
                     className="
-                      object-cover object-center rounded-2xl
-                      transition-transform duration-300 ease-out
-                      group-hover:scale-105              
-                    "
+                        w-full h-auto       /* responsive */
+                        object-contain
+                        rounded-2xl         /* bordes redondos en la imagen */
+                        transition-transform duration-300 ease-out
+                        group-hover:scale-100
+                      "
                   />
                 </div>
 

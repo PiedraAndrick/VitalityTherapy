@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body className={` bg-white`}>
         <ContainerLayout>
           <Navbar />
-          <main className=" ">
+          <main className="">
             <div className="">{children}</div>
           </main>
         </ContainerLayout>
