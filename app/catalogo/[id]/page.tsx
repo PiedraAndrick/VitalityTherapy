@@ -22,7 +22,7 @@ export default function SerumDetailPage() {
 
   if (!serum) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-gray-950 text-white p-8">
+      <main className="min-h-screen flex items-center justify-center bg-[#ffffffa5] text-[#205225a5]">
         <div className="text-center">
           <h1 className="text-2xl font-semibold mb-4">Producto no encontrado</h1>
           <p className="mb-6">El suero que buscas no existe en nuestro catálogo.</p>
@@ -38,7 +38,7 @@ export default function SerumDetailPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-950 text-white py-8 px-4">
+    <main className="min-h-screen bg-[#ffffffa5] text-[#033107] py-8 px-4">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Imagen del suero */}
         <div className="relative w-full max-w-md aspect-3/4 overflow-hidden rounded-2xl shadow-lg">
@@ -53,13 +53,13 @@ export default function SerumDetailPage() {
         <div className="md:w-1/2 w-full flex flex-col justify-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">{serum.name}</h1>
 
-          <p className="text-base md:text-lg mb-6 leading-relaxed text-gray-300">
+          <p className="text-base md:text-lg mb-6 leading-relaxed text-[#004612]">
             {serum.description}
           </p>
 
           {/* Contenido del suero */}
           <h2 className="text-xl font-semibold mb-2">Contenido</h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-4">
+          <ul className="list-disc pl-6 text-gray-600 mb-4">
             {serum.content.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -67,7 +67,7 @@ export default function SerumDetailPage() {
 
           {/* Beneficios del suero */}
           <h2 className="text-xl font-semibold mb-2">Beneficios</h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
+          <ul className="list-disc pl-6 text-gray-600 mb-6">
             {serum.benefits.map((benefit, index) => (
               <li key={index}>{benefit}</li>
             ))}
