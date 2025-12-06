@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-[#205225a5] px-4 py-12 md:py-16 flex items-center justify-center">
-            <div className="w-full max-w-5xl rounded-3xl bg-emerald-50/95 shadow-2xl px-6 py-8 md:px-10 md:py-10 space-y-8">
+            <div className="w-full max-w-5xl rounded-3xl bg-[#edf3ec] shadow-2xl px-6 py-8 md:px-10 md:py-10 space-y-8">
                 {/* Encabezado */}
                 <header className="space-y-2">
                     <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-950">
@@ -187,19 +187,7 @@ export default function ContactPage() {
                 </section>
 
                 {/* Mapa / ubicación */}
-                <section className="mt-2">
-                    <div className="rounded-2xl border border-emerald-100 bg-emerald-100/70 p-3 md:p-4">
-                        <div className="flex items-center justify-between mb-3">
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-700">
-                                    Cómo llegar
-                                </p>
-                                <p className="text-sm md:text-base font-medium text-emerald-950">
-                                    Encuéntranos en nuestra clínica
-                                </p>
-                            </div>
-                            {/* Aquí podrías poner un botón de abrir en maps */}
-                        </div>
+                
 
                         {/* Placeholder del mapa: reemplaza por un iframe o componente de mapa real */}
                         <section className="mt-2">
@@ -222,9 +210,6 @@ export default function ContactPage() {
                                 />
                             </div>
                         </section>
-
-                    </div>
-                </section>
             </div>
         </main>
     );
